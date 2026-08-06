@@ -1,0 +1,50 @@
+{
+  "name": "issue-triage-agent",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "next build --webpack",
+    "db:migrate": "bun scripts/migrate.ts",
+    "demo": "bun scripts/demo.ts",
+    "dev": "next dev",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint": "eslint .",
+    "start": "next start",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/gateway": "4.0.43",
+    "@chat-adapter/slack": "^4.36.0",
+    "@neondatabase/serverless": "1.1.0",
+    "@octokit/auth-app": "8.3.0",
+    "@octokit/request": "10.0.13",
+    "@vercel/sandbox": "2.9.2",
+    "ai": "7.0.55",
+    "next": "16.3.0",
+    "pg": "^8.22.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "workflow": "4.8.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.4",
+    "@eslint/js": "9.39.2",
+    "@types/bun": "1.3.12",
+    "@types/node": "26.1.2",
+    "@types/pg": "^8.20.4",
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.3.0",
+    "prettier": "3.8.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.56.1"
+  }
+}
